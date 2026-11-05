@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ recipe.recipe_name }}</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>{{ recipe.recipe_name }}</h1>
+
+    <h3>料理作者：{{ recipe.author }}</h3>
+
+    <hr>
+
+    <h2>食材與料理步驟</h2>
+
+    <p class="content">
+        {{ recipe.ingredients_and_steps }}
+    </p>
+
+    <br>
+
+    <a href="{{ url_for('index') }}">返回食譜首頁</a>
+
+</body>
+</html>

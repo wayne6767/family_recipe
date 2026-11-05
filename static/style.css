@@ -1,0 +1,41 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8ee;
+    margin: 40px;
+    color: #493b30;
+}
+
+h1 {
+    color: #bd713e;
+}
+
+button {
+    background-color: #d98b50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+.recipe-card {
+    background-color: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 1px solid #ead8c6;
+}
+
+.content {
+    white-space: pre-wrap;
+    line-height: 1.8;
+}

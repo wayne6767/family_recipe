@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>新增家庭食譜</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>新增家庭食譜</h1>
+
+    <form method="POST">
+
+        <label>食譜名稱：</label>
+        <input type="text"
+               name="recipe_name"
+               placeholder="例如：阿嬤的滷肉飯"
+               required>
+
+        <br><br>
+
+        <label>料理作者：</label>
+        <input type="text"
+               name="author"
+               placeholder="例如：阿嬤"
+               required>
+
+        <br><br>
+
+        <label>食材與料理步驟：</label>
+
+        <br>
+
+        <textarea name="ingredients_and_steps"
+                  rows="10"
+                  placeholder="請輸入食材及料理步驟..."
+                  required></textarea>
+
+        <br><br>
+
+        <button type="submit">儲存食譜</button>
+
+    </form>
+
+    <br>
+
+    <a href="{{ url_for('index') }}">返回首頁</a>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>家庭食譜分享網站</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>🍳 我的家庭食譜</h1>
+
+    <p>記錄家人的美味料理，分享每一道家的味道。</p>
+
+    <a href="{{ url_for('add_recipe') }}">
+        <button>新增食譜</button>
+    </a>
+
+    <hr>
+
+    <h2>所有家庭食譜</h2>
+
+    {% for recipe in recipes %}
+
+        <div class="recipe-card">
+
+            <h3>{{ recipe.recipe_name }}</h3>
+
+            <p>料理作者：{{ recipe.author }}</p>
+
+            <a href="{{ url_for('recipe_detail',
+                                recipe_id=recipe.id) }}">
+                查看詳細食譜
+            </a>
+
+        </div>
+
+    {% else %}
+
+        <p>目前還沒有食譜，快來新增第一道料理吧！</p>
+
+    {% endfor %}
+
+</body>
+</html>
